@@ -14,8 +14,8 @@
                 <p>Revolutionize the way you park with our smart autonomous technology. Whether it is parallel or perpendicular parking, the system scans the environment and calculates the perfect trajectory to park your vehicle safely and efficiently. Step out, relax, and let the vehicle handle the rest.</p>
             </div>
             <div class="navigations">
-                <a href="#">Login</a>
-                <a href="#">SignUp</a>
+                <a href="login.php">Login</a>
+                <a href="register.php">SignUp</a>
                 <a href="#">About Us</a>
             </div>
             <div class="social-media-icons">

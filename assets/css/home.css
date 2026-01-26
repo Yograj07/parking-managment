@@ -1,10 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Funnel+Sans:ital,wght@0,300..800;1,300..800&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Jost:ital,wght@0,100..900;1,100..900&family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Zalando+Sans:ital,wght@0,200..900;1,200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Funnel+Sans:ital,wght@0,300..800;1,300..800&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Jost:ital,wght@0,100..900;1,100..900&family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&family=Original+Surfer&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Zalando+Sans:ital,wght@0,200..900;1,200..900&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: popins, 'sans-serif';
+}
+
+::-webkit-scrollbar {
+    display: none;
 }
 
 ::selection {
@@ -14,6 +18,10 @@
 
 body {
     background-color: #ffffff;
+}
+
+main {
+    margin-top: 130px;
 }
 
 .bg-alternate {
@@ -26,74 +34,12 @@ body {
     transform: rotate(-1.5deg);
 }
 
-nav {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: transparent;
-    font-weight: 700;
-    padding: 15px;
-}
-
-nav ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    list-style: none;
-    margin-right: 55px;
-    gap: 25px;
-}
-
-nav ul li {
-    color: #fff;
-    background: #301CA0;
-    font-size: 1.1rem;
-    letter-spacing: 1.2px;
-    color: #ffffff;
-    padding: 15px;
-    color: ;
-    border: none;
-    width: 190px;
-    text-align: center;
-    outline: none;
-    border-radius: 7px;
-    cursor: pointer;
-    font-weight: 600;
-    transition: all 0.3s ease;
-}
-
-nav ul li:hover {
-    transform: scale(1.04);
-}
-
-nav ul li:nth-child(1) {
-    background-color: transparent;
-    color: #03045E;
-    border: 1px solid #03045E;
-    border-radius: 10px;
-}
-
-nav .header h1 {
-    font-family: "Jost", sans-serif;
-    margin-left: 55px;
-    display: flex;
-    font-weight: 800;
-    font-size: 2.5rem;
-    color: #8F0177;
-    font-weight: 700;
-    justify-content: center;
-    gap: 4px;
-    align-items: center;
-    text-shadow: 1px 5px 3px rgba(0, 0, 0, 0.3), 2px 2px 2px rgba(56, 56, 226, 0.3);
-
-}
-
 .main-container {
     margin-top: 50px;
     display: flex;
     justify-content: space-between;
-    align-items: center
+    align-items: center;
+    width: 100%;
 }
 
 .side-headings-main {
@@ -190,7 +136,7 @@ nav .header h1 {
         /* Start at 5% of the parent width */
         transform: translateX(80vw);
     }
-    
+
     to {
         /* End at 40% of the parent width */
         transform: translateX(35vw);
@@ -327,3 +273,69 @@ form hr {
     margin-top: -20px;
     margin-bottom: 20px;
 }
+
+
+@media screen and (max-width:1024px) {
+
+
+    main {
+        width: 100%;
+    }
+
+    .main-container {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .main-container .side-headings-main {
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+        margin: 0;
+
+    }
+
+    .main-container .side-headings-main h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    section .section-container {
+        margin-top: 50px;
+        width: 100%;
+    }
+
+    section .section-container .items {
+        flex-direction: column;
+    }
+
+    section .section-container .items .item-carts {
+        margin: 20px;
+        width: 80%;
+    }
+
+    .suggestion-container {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .suggestion-container form {
+        width: 90%;
+    }
+
+    form textarea {
+        width: 90%;
+    }
+
+}
+
+@media screen and (max-width: 400px) {
+    .main-container .side-img img {
+        width: 100%;
+    }
+
+    main .main-container {
+        margin-top: -50px;
+    }
+
+    }

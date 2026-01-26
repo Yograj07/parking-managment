@@ -43,7 +43,7 @@ footer {
 footer .rights {
     margin-top: 20px;
     text-align: center;
-    background: #000B58 ;
+    background: #000B58;
     color: #fff;
     font-size: 1.1rem;
     padding: 5px;
@@ -67,4 +67,37 @@ footer .navigations a {
     border-radius: 5px;
     text-align: center;
     width: 150px;
+}
+
+/* Responsive design */
+
+@media screen and (max-width: 1024px) {
+
+    footer{
+        width: 100%;
+    }
+    .flex{
+        flex-direction: column;
+        gap: 10px;
+    }
+    .headings{
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+
+    footer{
+        width: 100%;
+    }
+    .flex{
+        flex-direction: column;
+        gap: 10px;
+    }
+    .headings{
+        width: 90%;
+    }
+    .navigations{
+        width: 90%;
+    }
 }

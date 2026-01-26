@@ -2,38 +2,36 @@
 session_start();
 require_once "../config/db.php";
 
-
-
 if ($_SERVER["REQUEST_METHOD"] !== "POST") {
-    header("Location: ../index.php");
+    header("Location: ../home.php");
     exit;
-    }
-    
-    $username = trim($_POST['username']);
-    $password = trim($_POST['password']);
-    
-    if ($username === "" || $password === "") {
-        die("All fields are required");
-        }
+}
 
-        // Fetch active user
-        $sql = "SELECT id, username, password, role FROM users WHERE username = ? AND status = 'active' LIMIT 1";
-        $stmt = mysqli_prepare($conn, $sql);
-        mysqli_stmt_bind_param($stmt, "s", $username);
+$username = trim($_POST['username']);
+$password = trim($_POST['password']);
+
+// Helper function to handle errors
+function returnWithError($msg)
+{
+    $_SESSION['error'] = $msg;
+    header("Location: ../login.php"); // Path back to your login page
+    exit;
+}
+
+if ($username === "" || $password === "") {
+    returnWithError("Please fill in all fields.");
+}
+
+$sql = "SELECT id, username, password, role FROM users WHERE username = ? AND status = 'active' LIMIT 1";
+$stmt = mysqli_prepare($conn, $sql);
+mysqli_stmt_bind_param($stmt, "s", $username);
 mysqli_stmt_execute($stmt);
 $result = mysqli_stmt_get_result($stmt);
-
 $user = mysqli_fetch_assoc($result);
 
-if (!$user) {
-    die("Invalid credentials");
+if (!$user || !password_verify($password, $user['password'])) {
+    returnWithError("Invalid username or password.");
 }
-
-// TEMP: plain password check (we’ll hash next)
-if (!password_verify($password, $user['password'])) {
-    die("Invalid credentials");
-}
-
 
 // Set session
 $_SESSION['user_id']  = $user['id'];

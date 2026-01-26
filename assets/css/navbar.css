@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Funnel+Sans:ital,wght@0,300..800;1,300..800&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Jost:ital,wght@0,100..900;1,100..900&family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&family=Original+Surfer&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Zalando+Sans:ital,wght@0,200..900;1,200..900&display=swap');
+
+
+nav {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background: #f2f2f2;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 700;
+    padding: 15px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin-right: 55px;
+    gap: 25px;
+}
+
+nav ul li {
+    display: flex;
+}
+
+nav ul li a {
+    min-width: 120px;
+    max-width: 200px;
+    width: auto;
+    text-align: center;
+    font-size: 1.1rem;
+    text-decoration: none;
+    padding: 18px;
+    color: #fff;
+    background: #060771;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    transform: scale(1.03);
+}
+
+.nav-border-button {
+    background: transparent;
+    color: #03045E;
+    border: 1px solid #03045E;
+}
+
+nav .header h1 a {
+    text-decoration: none;
+    color: #03045E;
+    font-family: "Original Surfer", sans-serif;
+}
+
+nav .header h1 {
+    text-decoration: none;
+    margin-left: 55px;
+    display: flex;
+    font-weight: 800;
+    font-size: 2.5rem;
+    font-weight: 700;
+    justify-content: center;
+    gap: 4px;
+    align-items: center;
+    text-shadow: 1px 5px 3px rgba(0, 0, 0, 0.3), 2px 2px 2px rgba(56, 56, 226, 0.3);
+
+}
+
+/* Responsive navigation bar */
+
+@media screen and (max-width: 768px) {
+
+    nav {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        margin: 0;
+        gap: 10px;
+    }
+
+    nav ul li a {
+        width: auto;
+        padding: 10px 15px;
+        font-size: 0.95rem;
+    }
+
+    nav .header h1 {
+        font-size: 1.8rem;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    nav {
+        padding: 10px 5px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    nav ul li a {
+        font-size: 0.85rem;
+        padding: 8px 12px;
+        border-radius: 6px;
+    }
+}
