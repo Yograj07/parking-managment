@@ -1,20 +1,19 @@
 <?php
 session_start();
-require_once "../config/db.php";
+require_once "../../config/db.php";
 
 if ($_SERVER["REQUEST_METHOD"] !== "POST") {
-    header("Location: ../home.php");
+    header("Location: ../../login.php");
     exit;
 }
 
-$username = trim($_POST['username']);
-$password = trim($_POST['password']);
+$username = trim($_POST['username'] ?? '');
+$password = trim($_POST['password'] ?? '');
 
-// Helper function to handle errors
 function returnWithError($msg)
 {
     $_SESSION['error'] = $msg;
-    header("Location: ../login.php"); // Path back to your login page
+    header("Location: ../../login.php");
     exit;
 }
 
@@ -33,15 +32,13 @@ if (!$user || !password_verify($password, $user['password'])) {
     returnWithError("Invalid username or password.");
 }
 
-// Set session
 $_SESSION['user_id']  = $user['id'];
 $_SESSION['username'] = $user['username'];
 $_SESSION['role']     = $user['role'];
 
-// Redirect by role
 if ($user['role'] === 'admin') {
-    header("Location: ../admin/dashboard.php");
+    header("Location: ../../admin/dashboard.php");
 } else {
-    header("Location: ../user/dashboard.php");
+    header("Location: ../../user/dashboard.php");
 }
 exit;

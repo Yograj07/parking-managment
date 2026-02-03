@@ -60,7 +60,7 @@ if (isset($_SESSION['user_id'])) {
                 <p>Join ParkFlow to start parking smarter</p>
             </div>
 
-            <form action="actions/register_action.php" method="POST">
+            <form action="actions/auth/register_action.php" method="POST">
 
                 <div class="input-group">
                     <label>Full Name</label>

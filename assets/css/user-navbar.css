@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+:root {
+  --bg: #FFFFF0;
+  --primary: #060771;
+  --accent: #8F0177;
+  --card-bg: #ffffff;
+  --text-main: #2d2d2d;
+  --text-muted: #666;
+}
+
+/* ================= RESET ================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ================= SIDEBAR ================= */
+
+.sidebar {
+  width: 260px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: var(--card-bg);
+  border-right: 1px solid #eee;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+  transition: transform 0.3s ease;
+  z-index: 1000;
+}
+
+/* ================= SIDEBAR HEADER ================= */
+
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 20px 20px;
+}
+
+.sidebar-header h2 {
+  font-family: 'Josefin Sans', sans-serif;
+  color: var(--accent);
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+/* ================= TOGGLE BUTTON ================= */
+/* ===== Toggle Button (Floating) ===== */
+.menu-toggle {
+  position: fixed;
+  top: 18px;
+  left: 18px;
+  width: 42px;
+  height: 42px;
+  border-radius: 8px;
+  background: var(--primary);
+  border: none;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1200;
+  /* ABOVE sidebar */
+}
+
+.menu-toggle span {
+  height: 3px;
+  width: 100%;
+  background: #fff;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+/* ☰ → ❌ */
+.menu-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+
+/* ================= USER INFO ================= */
+
+.user-info {
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 25px;
+}
+
+/* ================= MENU ================= */
+
+.sidebar ul {
+  list-style: none;
+  width: 100%;
+}
+
+.sidebar ul li {
+  width: 100%;
+}
+
+.sidebar ul li a {
+  display: flex;
+  align-items: center;
+  padding: 14px 25px;
+  text-decoration: none;
+  color: var(--text-main);
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border-left: 4px solid transparent;
+}
+
+.sidebar ul li a:hover,
+.sidebar ul li a.active {
+  background: rgba(6, 7, 113, 0.08);
+  border-left-color: var(--primary);
+  color: var(--primary);
+}
+
+/* Logout highlight */
+.sidebar ul li a.logout {
+  color: #b00020;
+}
+
+.sidebar ul li a.logout:hover {
+  background: rgba(176, 0, 32, 0.08);
+  border-left-color: #b00020;
+}
+
+/* ================= OVERLAY ================= */
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s ease;
+  z-index: 900;
+}
+
+.overlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ================= MAIN CONTENT ================= */
+
+.main-content {
+  margin-left: 260px;
+  padding: 20px;
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 992px) {
+  .sidebar {
+    transform: translateX(-100%);
+  }
+
+  .sidebar-header {
+    justify-content: flex-start;
+    padding-left: 70px;
+    /* aligns logo nicely after toggle */
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .main-content {
+    margin-left: 0;
+    padding-top: 80px;
+  }
+
+  body.no-scroll {
+    overflow: hidden;
+  }
+}

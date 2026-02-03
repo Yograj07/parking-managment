@@ -1,2 +1,1 @@
-DirectoryIndex disabled
-Options +Indexes
+DirectoryIndex home.php index.php

@@ -1,66 +1,26 @@
-<html lang="en">
-
-<head>
-    <script src="https://cdn.lordicon.com/lordicon.js"></script>
-    <link rel="stylesheet" href="../assets/css/footer.css">
-</head>
-
-<body>
-
-    <footer>
-        <div class="footer-container flex">
-            <div class="headings flex-col">
-                <h1>ParkFlow</h1>
-                <p>Revolutionize the way you park with our smart autonomous technology. Whether it is parallel or perpendicular parking, the system scans the environment and calculates the perfect trajectory to park your vehicle safely and efficiently. Step out, relax, and let the vehicle handle the rest.</p>
-            </div>
-            <div class="navigations">
-                <a href="login.php">Login</a>
-                <a href="register.php">SignUp</a>
-                <a href="#">About Us</a>
-            </div>
-            <div class="social-media-icons">
-                <span><lord-icon
-                        src="https://cdn.lordicon.com/tgyvxauj.json"
-                        trigger="loop"
-                        delay="1500"
-                        stroke="bold"
-                        colors="primary:#060771,secondary:#0000000"
-                        style="width:40px;height:40px">
-                    </lord-icon></span>
-
-                <span><lord-icon
-                        src="https://cdn.lordicon.com/yizwahhw.json"
-                        trigger="loop"
-                        delay="1500"
-                        stroke="bold"
-                        colors="primary:#060771,secondary:#1b1091"
-                        style="width:40px;height:40px">
-                    </lord-icon></span>
-
-                <span><lord-icon
-                        src="https://cdn.lordicon.com/qgebwute.json"
-                        trigger="loop"
-                        delay="1500"
-                        stroke="bold"
-                        colors="primary:#060771,secondary:#000000"
-                        style="width:40px;height:40px">
-                    </lord-icon></span>
-
-                <span><lord-icon
-                        src="https://cdn.lordicon.com/bfoumeno.json"
-                        trigger="loop"
-                        delay="1500"
-                        stroke="bold"
-                        colors="primary:#060771,secondary:#1b1091"
-                        style="width:40px;height:40px">
-                    </lord-icon></span>
-            </div>
+<footer class="site-footer">
+    <div class="footer-inner">
+        <div class="footer-brand">
+            <h2>ParkFlow</h2>
+            <p>
+                A smart parking platform that helps drivers find, reserve, and manage slots with
+                minimal wait time. Built for clean workflows and real-world operations.
+            </p>
         </div>
-        <div class="rights">
-            &copy; 2026 All Rights Reserved | ParkFlow AI's(Ltd) | Made in India
+        <div class="footer-links">
+            <h4>Quick Links</h4>
+            <a href="login.php">Login</a>
+            <a href="register.php">Sign Up</a>
+            <a href="about.php">About</a>
         </div>
-    </footer>
-
-</body>
-
-</html>
+        <div class="footer-links">
+            <h4>Explore</h4>
+            <a href="how_it_works.php">How It Works</a>
+            <a href="home.php#features">Features</a>
+            <a href="home.php#cta">Get Started</a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        &copy; 2026 ParkFlow. All Rights Reserved.
+    </div>
+</footer>

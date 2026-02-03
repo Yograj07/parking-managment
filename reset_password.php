@@ -17,6 +17,7 @@ if ($token === '') {
     <title>Reset Password | ParkFlow</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/login.css">
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
 </head>
 
 <body data-redirect="login.php">
@@ -44,7 +45,7 @@ if ($token === '') {
                 <p>Create a new password</p>
             </div>
 
-            <form action="actions/reset_password_action.php" method="POST">
+            <form action="actions/auth/reset_password.php" method="POST">
                 <input type="hidden" name="token" value="<?= htmlspecialchars($token) ?>">
 
                 <div class="input-group">

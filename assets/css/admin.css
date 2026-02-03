@@ -1,1 +1,172 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Funnel+Sans:ital,wght@0,300..800;1,300..800&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Jost:ital,wght@0,100..900;1,100..900&family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&family=Original+Surfer&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Zalando+Sans:ital,wght@0,200..900;1,200..900&display=swap');
+:root {
+    --primary: #060771;
+    --primary-dark: #040552;
+    --bg: #f6f7fb;
+    --card-bg: #ffffff;
+    --text-main: #1f2937;
+    --text-muted: #6b7280;
+    --success: #0f766e;
+    --danger: #b91c1c;
+    --border: #e5e7eb;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--text-main);
+}
+
+/* ===== SIDEBAR ===== */
+.admin-sidebar {
+    width: 260px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: linear-gradient(180deg, var(--primary), var(--primary-dark));
+    color: #fff;
+    padding: 24px 0;
+}
+
+.sidebar-brand {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.sidebar-brand h2 {
+    font-size: 1.9rem;
+}
+
+.sidebar-brand span {
+    font-size: 0.85rem;
+    opacity: 0.8;
+}
+
+.sidebar-menu {
+    list-style: none;
+}
+
+.sidebar-menu li a {
+    display: block;
+    padding: 14px 28px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.sidebar-menu li.active a,
+.sidebar-menu li a:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.sidebar-menu li.logout a {
+    color: #ffd1d1;
+}
+
+/* ===== MAIN CONTENT ===== */
+.admin-main {
+    margin-left: 260px;
+    padding: 30px;
+}
+
+/* ===== PAGE HEADER ===== */
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.page-header h1 {
+    font-size: 1.8rem;
+}
+
+/* ===== CARD ===== */
+.card {
+    background: var(--card-bg);
+    border-radius: 14px;
+    padding: 22px;
+    border: 1px solid var(--border);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.03);
+}
+
+/* ===== FORM ===== */
+.form-group {
+    margin-bottom: 15px;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    font-size: 0.95rem;
+}
+
+button {
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+button:hover {
+    opacity: 0.95;
+}
+
+/* ===== TABLE ===== */
+.table-wrapper {
+    margin-top: 25px;
+    background: var(--card-bg);
+    border-radius: 14px;
+    overflow-x: auto;
+    border: 1px solid var(--border);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 14px 18px;
+    text-align: left;
+}
+
+thead {
+    background: #f1f3f9;
+}
+
+tbody tr:not(:last-child) {
+    border-bottom: 1px solid var(--border);
+}
+
+/* ===== STATUS BADGES ===== */
+.badge {
+    padding: 5px 12px;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.badge.available {
+    background: rgba(15, 118, 110, 0.15);
+    color: var(--success);
+}
+
+.badge.occupied {
+    background: rgba(185, 28, 28, 0.15);
+    color: var(--danger);
+}

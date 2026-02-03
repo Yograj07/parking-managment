@@ -9,6 +9,7 @@ session_start();
     <title>Forgot Password | ParkFlow</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/login.css">
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
 </head>
 
 <body>
@@ -36,7 +37,7 @@ session_start();
                 <p>Enter your registered email to reset password</p>
             </div>
 
-            <form action="actions/forgot_password_action.php" method="POST">
+            <form action="actions/auth/forgot_password.php" method="POST">
                 <div class="input-group">
                     <label>Email</label>
                     <input type="email" name="email" placeholder="Enter your email" required>

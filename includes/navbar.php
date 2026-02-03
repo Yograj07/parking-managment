@@ -1,21 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../assets/css/navbar.css">
-</head>
-
-<body>
-    <nav>
-        <div class="header">
-            <h1><a href="home.php">ParkFlow</a></h1>
-        </div>
-        <ul>
-            <li><a href="login.php" class="nav-border-button">Login</a></li>
-            <li><a href="register.php">SignUp</a></li>
-        </ul>
-    </nav>
-</body>
-
-</html>
+<nav class="top-nav">
+    <div class="brand">
+        <a href="home.php">ParkFlow</a>
+    </div>
+    <div class="nav-links">
+        <a href="about.php">About</a>
+        <a href="how_it_works.php">How It Works</a>
+    </div>
+    <div class="nav-actions">
+        <a href="login.php" class="nav-link">Login</a>
+        <a href="register.php" class="nav-cta">Sign Up</a>
+    </div>
+</nav>

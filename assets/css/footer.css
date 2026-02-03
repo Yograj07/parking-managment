@@ -1,103 +1,54 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
+.site-footer {
+    background: linear-gradient(180deg, rgba(6, 7, 113, 0.05), rgba(143, 1, 119, 0.04));
+    padding: 40px 5% 20px;
+    border-top: 1px solid var(--border);
 }
 
-.flex-col {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    gap: 10px;
-    padding: 20px;
+.footer-inner {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 24px;
+    align-items: start;
 }
 
-.flex {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    /* gap: 10px; */
+.footer-brand h2 {
+    color: var(--primary);
+    font-size: 1.8rem;
+    margin-bottom: 10px;
 }
 
-footer {
-    width: 100%;
-    background: linear-gradient(180deg, #f1e9ffe0, #faf7ff);
+.footer-brand p {
+    color: var(--text-muted);
+    line-height: 1.6;
 }
 
-.headings {
-    width: 30%;
-    color: #060771;
+.footer-links h4 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: var(--text-main);
 }
 
-.headings h1 {
-    font-size: 2.3rem;
-}
-
-.headings p {
-    text-align: justify;
-}
-
-footer .rights {
-    margin-top: 20px;
-    text-align: center;
-    background: #000B58;
-    color: #fff;
-    font-size: 1.1rem;
-    padding: 5px;
-}
-
-
-
-
-footer .navigations {
-    display: flex;
-    gap: 10px;
-}
-
-
-footer .navigations a {
+.footer-links a {
+    display: block;
+    color: var(--text-muted);
     text-decoration: none;
-    background-color: #060771;
-    color: #fff;
-    border: none;
-    padding: 10px;
-    border-radius: 5px;
+    margin-bottom: 8px;
+    transition: 0.2s ease;
+}
+
+.footer-links a:hover {
+    color: var(--primary);
+}
+
+.footer-bottom {
+    margin-top: 26px;
     text-align: center;
-    width: 150px;
+    color: var(--text-muted);
+    font-size: 0.9rem;
 }
 
-/* Responsive design */
-
-@media screen and (max-width: 1024px) {
-
-    footer{
-        width: 100%;
-    }
-    .flex{
-        flex-direction: column;
-        gap: 10px;
-    }
-    .headings{
-        width: 90%;
-    }
-}
-
-@media screen and (max-width: 400px) {
-
-    footer{
-        width: 100%;
-    }
-    .flex{
-        flex-direction: column;
-        gap: 10px;
-    }
-    .headings{
-        width: 90%;
-    }
-    .navigations{
-        width: 90%;
+@media (max-width: 900px) {
+    .footer-inner {
+        grid-template-columns: 1fr;
     }
 }
